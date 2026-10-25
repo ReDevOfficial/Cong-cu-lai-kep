@@ -59,11 +59,25 @@
 <body>
 
 <div class="container">
+<!-- KHU VỰC GIẢI THÍCH ĐƯỢC CHUYỂN LÊN TRÊN CÙNG -->
+    <div class="explanation-box">
+        <p style="margin-top: 0; margin-bottom: 5px;"><strong>Công thức: A = P × (1 + r)^n</strong></p>
+        <p style="margin: 0;">Trong đó:</p>
+        <ul>
+            <li><strong>A (Amount):</strong> Tổng số tiền nhận được trong tương lai (cả gốc lẫn lãi)</li>
+            <li><strong>P (Principal):</strong> Số vốn gốc ban đầu</li>
+            <li><strong>r (Rate):</strong> Lãi suất định kỳ (thường tính theo năm)</li>
+            <li><strong>n (Number of periods):</strong> Số kỳ tính lãi (số năm)</li>
+        </ul>
+        <p class="note" style="margin-bottom: 0;">(Đối với tiền gửi tiết kiệm tại Việt Nam, tiền lãi thường được tất toán và nhập gốc quay vòng mỗi năm một lần, do đó sử dụng công thức lãi kép cơ bản tính theo năm là sát với thực tế nhất).</p>
+    </div>
+
+
     <h2>Mô Phỏng Lãi Kép & Đầu Tư</h2>
     
     <!-- Các thanh trượt điều chỉnh thông số -->
     <div class="control-group">
-        <label>Vốn ban đầu: <span id="valPrincipal">100,000,000 ₫</span></label>
+        <label>Vốn ban đầu (P): <span id="valPrincipal">100,000,000 ₫</span></label>
         <input type="range" id="inputPrincipal" min="0" max="1000000000" step="10000000" value="100000000">
     </div>
 
@@ -73,18 +87,18 @@
     </div>
 
     <div class="control-group">
-        <label>Lãi suất kỳ vọng (Năm): <span id="valRate">8 %</span></label>
+        <label>Lãi suất kỳ vọng (Năm) (r): <span id="valRate">8 %</span></label>
         <input type="range" id="inputRate" min="1" max="20" step="0.5" value="8">
     </div>
 
     <div class="control-group">
-        <label>Thời gian đầu tư (Năm): <span id="valYears">20 Năm</span></label>
+        <label>Thời gian đầu tư (Năm)(n): <span id="valYears">20 Năm</span></label>
         <input type="range" id="inputYears" min="1" max="40" step="1" value="20">
     </div>
 
     <!-- Hộp hiển thị kết quả -->
     <div class="result-box">
-        <p style="margin-top:0;">Tổng tài sản cuối kỳ:</p>
+        <p style="margin-top:0;">Tổng tài sản cuối kỳ (A):</p>
         <h3 id="finalTotal">0 ₫</h3>
     </div>
 
